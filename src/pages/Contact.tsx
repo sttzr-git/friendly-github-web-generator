@@ -1,4 +1,3 @@
-
 import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -11,7 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { GitIssue, Github, Linkedin, Mail, MessageSquare, Twitter } from "lucide-react";
+import { Bug, Github, Linkedin, Mail, MessageSquare, Twitter } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -78,7 +77,7 @@ const Contact = () => {
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-github-gray">
-                        <GitIssue className="h-5 w-5 text-github-blue" />
+                        <Bug className="h-5 w-5 text-github-blue" />
                       </div>
                       <div>
                         <p className="text-sm font-medium">Issue Tracker</p>
