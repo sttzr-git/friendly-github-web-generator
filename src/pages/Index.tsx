@@ -6,7 +6,8 @@ import ProfileCard from "@/components/ProfileCard";
 import RepositoryCard from "@/components/RepositoryCard";
 import ContributionGraph from "@/components/ContributionGraph";
 import { Button } from "@/components/ui/button";
-import { Book, Pin, Star } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Book, Globe, Pin, Star } from "lucide-react";
 
 const Index = () => {
   // Mock data for the contribution graph
@@ -92,6 +93,21 @@ const Index = () => {
                 followers={142}
                 following={87}
               />
+              
+              {/* Globe Image */}
+              <div className="mt-6 rounded-lg border border-border/40 overflow-hidden">
+                <h3 className="p-3 text-lg font-medium border-b border-border/40 flex items-center gap-2">
+                  <Globe className="h-5 w-5 text-github-blue" />
+                  <span>Weltkugel</span>
+                </h3>
+                <AspectRatio ratio={1/1} className="bg-github-gray">
+                  <img 
+                    src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" 
+                    alt="Weltkugel" 
+                    className="object-cover w-full h-full"
+                  />
+                </AspectRatio>
+              </div>
             </aside>
             <div className="md:col-span-2 lg:col-span-3">
               <div className="flex flex-col gap-6">
